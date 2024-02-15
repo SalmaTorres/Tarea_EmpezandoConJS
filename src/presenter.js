@@ -22,7 +22,7 @@ const formulario = document.querySelector("#multiplicar-form");
 const resul = document.querySelector("#resultado-mult");
 
 formulario.addEventListener("submit", (event) => {
-  resul.preventDefault();
+  event.preventDefault();
 
   const firstNumber = Number.parseInt(num1.value);
   const secondNumber = Number.parseInt(num2.value);
