@@ -27,5 +27,5 @@ formulario.addEventListener("submit", (event) => {
   const firstNumber = Number.parseInt(num1.value);
   const secondNumber = Number.parseInt(num2.value);
 
-  div.innerHTML = "<p>" + multiplicar(firstNumber, secondNumber) + "</p>";
+  resul.innerHTML = "<p>" + multiplicar(firstNumber, secondNumber) + "</p>";
 });
