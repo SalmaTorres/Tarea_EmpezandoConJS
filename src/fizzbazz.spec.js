@@ -10,4 +10,7 @@ describe("Fizzbazz", () => {
     it("deberia generar fizz si es el nro 3", () => {
         expect(generarFizzbazz(3)).toEqual("Fizz");
     });
+    it("deberia generar fizz si el nro es multiplo de 3", () => {
+        expect(generarFizzbazz(6)).toEqual("Fizz");
+    });
 })
