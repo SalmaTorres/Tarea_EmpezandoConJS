@@ -13,4 +13,10 @@ describe("Bisiesto", () => {
     it("deberia generar NO ES BISIESTO si el anio es divisible por 100 y no por 400", () => {
         expect(EsBisiesto(1900)).toEqual("NO ES BISIESTO");
     });
+    it("deberia generar ES BISIESTO si el anio es divisible por 4 y no por 100", () => {
+        expect(EsBisiesto(2008)).toEqual("ES BISIESTO");
+    });
+    it("deberia generar ES BISIESTO si el anio es divisible por 4 y no por 100", () => {
+        expect(EsBisiesto(2012)).toEqual("ES BISIESTO");
+    });
 })

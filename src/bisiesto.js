@@ -4,6 +4,10 @@ function EsBisiesto(anio){
     }else{
         if(anio % 100 == 0){
             return "NO ES BISIESTO";
+        }else{
+            if(anio % 4 == 0){
+                return "ES BISIESTO"
+            }
         }
     }
     return " ";
