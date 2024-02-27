@@ -1,4 +1,5 @@
 import generarFizzbazz from "./fizzbazz.js";
+import generarSecuenciaFizzbazz from "./fizzbazz.js";
 
 describe("Fizzbazz", () => {
     it("deberia generar el mismo numero para uno que no tiene reglas como el nro 1", () => {
@@ -21,5 +22,8 @@ describe("Fizzbazz", () => {
     });
     it("deberia generar FizzBazz para un numero que siga esa regla con los multiplos de 3 y 5 a la vez", () => {
         expect(generarFizzbazz(15)).toEqual("FizzBazz");
+    });
+    it("deberia generar una secuencia con limite 1", () => {
+        expect(generarSecuenciaFizzbazz(1)).toEqual("1");
     });
 })

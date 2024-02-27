@@ -17,3 +17,11 @@ function generarFizzbazz(n){
 }
 
 export default generarFizzbazz;
+
+function generarSecuenciaFizzBazz(limite){
+    var secuencia = "";
+    for(var i=1; i<=limite; i++){
+        secuencia = secuencia + generarFizzbazz(i) + " ";
+    }
+    return secuencia;
+}
