@@ -2,6 +2,9 @@ function generarFizzbazz(n){
     const FIZZ = 3;
     const BAZZ = 5;
     if(n % FIZZ === 0){
+        if(n % BAZZ === 0){
+            return "FizzBazz";
+        }
         return "Fizz";
     }else
     {
@@ -9,6 +12,7 @@ function generarFizzbazz(n){
             return "Bazz";
         }
     }
+
     return n + "";
 }
 
