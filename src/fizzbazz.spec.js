@@ -1,5 +1,5 @@
 import generarFizzbazz from "./fizzbazz.js";
-import generarSecuenciaFizzbazz from "./fizzbazz.js";
+import generarSecuenciaFizzbazz from "./fizzbazz_secuencia.js";
 
 describe("Fizzbazz", () => {
     it("deberia generar el mismo numero para uno que no tiene reglas como el nro 1", () => {
@@ -24,6 +24,9 @@ describe("Fizzbazz", () => {
         expect(generarFizzbazz(15)).toEqual("FizzBazz");
     });
     it("deberia generar una secuencia con limite 1", () => {
-        expect(generarSecuenciaFizzbazz(1)).toEqual("1");
+        expect(generarSecuenciaFizzbazz(1)).toEqual("1 ");
+    });
+    it("deberia generar una secuencia con limite 2", () => {
+        expect(generarSecuenciaFizzbazz(2)).toEqual("1 2 ");
     });
 })
