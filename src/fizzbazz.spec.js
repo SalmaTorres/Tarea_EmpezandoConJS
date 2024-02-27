@@ -29,4 +29,10 @@ describe("Fizzbazz", () => {
     it("deberia generar una secuencia con limite 2", () => {
         expect(generarSecuenciaFizzbazz(2)).toEqual("1 2 ");
     });
+    it("deberia generar una secuencia con limite 4", () => {
+        expect(generarSecuenciaFizzbazz(4)).toEqual("1 2 Fizz 4 ");
+    });
+    it("deberia generar una secuencia con limite 15", () => {
+        expect(generarSecuenciaFizzbazz(15)).toEqual("1 2 Fizz 4 Bazz Fizz 7 8 Fizz Bazz 11 Fizz 13 14 FizzBazz ");
+    });
 })
