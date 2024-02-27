@@ -43,3 +43,16 @@ formFizzBazz.addEventListener("submit", (event) => {
 
   secuenciaFizzBazz.innerHTML = "<p>" + generarSecuenciaFizzBazz(limite) + "</p>";
 });
+
+import EsBisiesto from "./bisiesto";
+
+const fecha = document.querySelector("#anio");
+const formBisiesto = document.querySelector("#Bisiesto-form");
+const respBisiesto = document.querySelector("#resultado-Bisiesto");
+
+formBisiesto.addEventListener("submit", (event => {
+  event.preventDefault();
+
+  const anio = Number.parseInt(fecha.value);
+  respBisiesto.innerHTML = "<p>" + EsBisiesto(anio) + "</p>";
+}))

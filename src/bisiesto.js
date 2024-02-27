@@ -11,7 +11,6 @@ function EsBisiesto(anio){
                 return "NO ES BISIESTO";
         }
     }
-    return " ";
 }
 
 export default EsBisiesto;
