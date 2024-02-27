@@ -7,7 +7,8 @@ function EsBisiesto(anio){
         }else{
             if(anio % 4 == 0){
                 return "ES BISIESTO"
-            }
+            }else
+                return "NO ES BISIESTO";
         }
     }
     return " ";
