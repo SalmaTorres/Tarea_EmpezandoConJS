@@ -29,3 +29,17 @@ formulario.addEventListener("submit", (event) => {
 
   resul.innerHTML = "<p>" + multiplicar(firstNumber, secondNumber) + "</p>";
 });
+
+import generarSecuenciaFizzBazz from "./fizzbazz_secuencia";
+
+const lim = document.querySelector("#limite");
+const formFizzBazz = document.querySelector("#FizzBazz-form");
+const secuenciaFizzBazz = document.querySelector("#resultado-secuenciaFizzBazz");
+
+formFizzBazz.addEventListener("submit", (event) => {
+  event.preventDefault();
+  
+  const limite = Number.parseInt(lim.value);
+
+  secuenciaFizzBazz.innerHTML = "<p>" + generarSecuenciaFizzBazz(limite) + "</p>";
+});
