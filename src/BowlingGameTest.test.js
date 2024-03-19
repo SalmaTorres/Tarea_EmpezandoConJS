@@ -52,6 +52,11 @@ describe("BowlingGame", () => {
         expect(game.score()).toEqual(24);
     });
 
+    it("debería devolver 300 para un juego perfecto", () => {
+        rollMany(12, 10);
+        expect(game.score()).toEqual(300);
+    });
+
     function rollStrike() {
         game.roll(10);
     }
