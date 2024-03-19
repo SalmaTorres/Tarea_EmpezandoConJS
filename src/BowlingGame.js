@@ -1,10 +1,11 @@
 function Game() {
     let score = 0;
-    const rolls = [];
-  
+    const rolls = new Array(21).fill(0); 
+    let currentRoll = 0;
+
     this.roll = function(pins) {
-      rolls.push(pins);
-      score += pins;
+    score += pins;
+    rolls[currentRoll++] = pins;
     };
   
     this.score = function() {
