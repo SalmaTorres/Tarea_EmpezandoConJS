@@ -1,12 +1,14 @@
 function Game() {
+    let score = 0;
     const rolls = [];
   
     this.roll = function(pins) {
       rolls.push(pins);
+      score += pins;
     };
   
     this.score = function() {
-      return rolls.reduce((total, pins) => total + pins, 0);
+      return score;
     };
   }
 
