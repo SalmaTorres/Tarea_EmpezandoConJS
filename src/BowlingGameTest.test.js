@@ -21,13 +21,13 @@ describe("BowlingGame", () => {
       expect(game.score()).toEqual(20);
     });
 
-    /*it("debería devolver 16 para un juego con un solo spare", () => {
+    it("debería devolver 16 para un juego con un solo spare", () => {
         game.roll(5);
         game.roll(5); // spare
         game.roll(3);
         rollMany(17, 0);
         expect(game.score()).toEqual(16);
-      });*/
+    });
   
     function rollMany(n, pins) {
       for (let i = 0; i < n; i++) {
