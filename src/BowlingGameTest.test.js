@@ -35,6 +35,14 @@ describe("BowlingGame", () => {
         rollMany(17, 0);
         expect(game.score()).toEqual(16);
     });
+
+    it("debería devolver 24 para un juego con un solo strike", () => {
+        game.roll(10)
+        game.roll(3);
+        game.roll(4);
+        rollMany(16, 0);
+        expect(game.score()).toEqual(24);
+    });
   
     function rollMany(n, pins) {
       for (let i = 0; i < n; i++) {
