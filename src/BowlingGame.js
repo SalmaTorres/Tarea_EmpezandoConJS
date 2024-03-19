@@ -10,20 +10,35 @@ function Game() {
         let score = 0;
         let frameIndex = 0;
         for (let frame = 0; frame < 10; frame++) {
-            if (rolls[frameIndex] === 10) { // strike
-                score += 10 + rolls[frameIndex + 1] + rolls[frameIndex + 2];
+            if (isStrike(frameIndex)) {
+                score += 10 + strikeBonus(frameIndex);
                 frameIndex++;
             } else if (isSpare(frameIndex)) {
-                score += 10 + rolls[frameIndex + 2];
+                score += 10 + spareBonus(frameIndex);
                 frameIndex += 2;
             } else {
-                score += rolls[frameIndex] + rolls[frameIndex + 1];
+                score += sumOfBallsInFrame(frameIndex);
                 frameIndex += 2;
             }
         }
       return score;
     };
 
+    function isStrike(frameIndex) {
+        return rolls[frameIndex] === 10;
+    }
+
+    function sumOfBallsInFrame(frameIndex) {
+        return rolls[frameIndex] + rolls[frameIndex + 1];
+    }
+
+    function spareBonus(frameIndex) {
+        return rolls[frameIndex + 2];
+    }
+
+    function strikeBonus(frameIndex) {
+        return rolls[frameIndex + 1] + rolls[frameIndex + 2];
+    }
     function isSpare(frameIndex) {
         return rolls[frameIndex] + rolls[frameIndex + 1] === 10;
     }
